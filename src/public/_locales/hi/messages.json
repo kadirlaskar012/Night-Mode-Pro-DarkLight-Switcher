@@ -1,0 +1,104 @@
+{
+  "extName": {
+    "message": "नाईट मोड प्रो – डार्क/लाइट स्विचर",
+    "description": "Extension Name"
+  },
+  "extDescription": {
+    "message": "हर वेबसाइट के लिए आँखों का संपूर्ण आराम। कस्टमाइज़ करने योग्य ब्राइटनेस, वॉर्म लाइट फ़िल्टर और स्मार्ट कंट्रास्ट के साथ किसी भी साइट को डार्क मोड में बदलें।",
+    "description": "Extension Description"
+  },
+  "modeLight": {
+    "message": "लाइट",
+    "description": "Light mode label"
+  },
+  "modeDark": {
+    "message": "डार्क",
+    "description": "Dark mode label"
+  },
+  "modeAuto": {
+    "message": "ऑटो",
+    "description": "Auto mode label"
+  },
+  "powerActive": {
+    "message": "नाईट मोड सक्रिय है",
+    "description": "State when active"
+  },
+  "powerInactive": {
+    "message": "नाईट मोड बंद है",
+    "description": "State when inactive"
+  },
+  "brightness": {
+    "message": "ब्राइटनेस",
+    "description": "Brightness slider label"
+  },
+  "warmLightFilter": {
+    "message": "वॉर्म लाइट फ़िल्टर",
+    "description": "Warm slider label"
+  },
+  "contrast": {
+    "message": "कंट्रास्ट",
+    "description": "Contrast slider label"
+  },
+  "grayscale": {
+    "message": "ग्रेस्केल",
+    "description": "Grayscale slider label"
+  },
+  "presets": {
+    "message": "प्रीसेट",
+    "description": "Presets section label"
+  },
+  "savePreset": {
+    "message": "प्रीसेट सेव करें",
+    "description": "Save preset button"
+  },
+  "settings": {
+    "message": "सेटिंग्स",
+    "description": "Settings button"
+  },
+  "upgrade": {
+    "message": "अपग्रेड $२.९९",
+    "description": "Upgrade button"
+  },
+  "rateUs": {
+    "message": "रेटिंग दें",
+    "description": "Rate us button"
+  },
+  "alreadyDark": {
+    "message": "साइट में पहले से डार्क थीम मौजूद है",
+    "description": "Already dark indicator"
+  },
+  "restrictedPage": {
+    "message": "इस ब्राउज़र पेज पर नाईट मोड उपलब्ध नहीं है।",
+    "description": "Restricted page notice"
+  },
+  "proActive": {
+    "message": "प्रो सक्रिय",
+    "description": "Pro plan status"
+  },
+  "trialRemaining": {
+    "message": "ट्रायल: $DAYS$ दिन शेष",
+    "description": "Trial days remaining",
+    "placeholders": {
+      "days": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "upgradeModalTitle": {
+    "message": "नाईट मोड प्रो अनलॉक करें",
+    "description": "Upgrade modal title"
+  },
+  "upgradeModalSubtitle": {
+    "message": "रात में आरामदायक ब्राउज़िंग का आनंद लें",
+    "description": "Upgrade modal subtitle"
+  },
+  "upgradeButton": {
+    "message": "लाइफटाइम प्रो में अपग्रेड करें",
+    "description": "Upgrade button text"
+  },
+  "restorePurchase": {
+    "message": "पहले ही खरीदा है? लाइसेंस की दर्ज करें",
+    "description": "Restore purchase text"
+  }
+}

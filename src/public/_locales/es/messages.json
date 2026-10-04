@@ -1,0 +1,104 @@
+{
+  "extName": {
+    "message": "Night Mode Pro – Alternador Oscuro/Claro",
+    "description": "Extension Name"
+  },
+  "extDescription": {
+    "message": "Comodidad visual instantánea para cada sitio web. Activa el modo oscuro con brillo personalizable, filtro de luz cálida y contraste inteligente.",
+    "description": "Extension Description"
+  },
+  "modeLight": {
+    "message": "Claro",
+    "description": "Light mode label"
+  },
+  "modeDark": {
+    "message": "Oscuro",
+    "description": "Dark mode label"
+  },
+  "modeAuto": {
+    "message": "Auto",
+    "description": "Auto mode label"
+  },
+  "powerActive": {
+    "message": "Modo Noche Activo",
+    "description": "State when active"
+  },
+  "powerInactive": {
+    "message": "Modo Noche Inactivo",
+    "description": "State when inactive"
+  },
+  "brightness": {
+    "message": "Brillo",
+    "description": "Brightness slider label"
+  },
+  "warmLightFilter": {
+    "message": "Filtro de Luz Cálida",
+    "description": "Warm slider label"
+  },
+  "contrast": {
+    "message": "Contraste",
+    "description": "Contrast slider label"
+  },
+  "grayscale": {
+    "message": "Escala de Grises",
+    "description": "Grayscale slider label"
+  },
+  "presets": {
+    "message": "Ajustes Preestablecidos",
+    "description": "Presets section label"
+  },
+  "savePreset": {
+    "message": "Guardar ajuste",
+    "description": "Save preset button"
+  },
+  "settings": {
+    "message": "Configuración",
+    "description": "Settings button"
+  },
+  "upgrade": {
+    "message": "Mejorar $2.99",
+    "description": "Upgrade button"
+  },
+  "rateUs": {
+    "message": "Califícanos",
+    "description": "Rate us button"
+  },
+  "alreadyDark": {
+    "message": "El sitio ya tiene tema oscuro nativo",
+    "description": "Already dark indicator"
+  },
+  "restrictedPage": {
+    "message": "El Modo Noche no está disponible en esta página del navegador.",
+    "description": "Restricted page notice"
+  },
+  "proActive": {
+    "message": "PRO ACTIVO",
+    "description": "Pro plan status"
+  },
+  "trialRemaining": {
+    "message": "PRUEBA: $DAYS$d restantes",
+    "description": "Trial days remaining",
+    "placeholders": {
+      "days": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "upgradeModalTitle": {
+    "message": "Desbloquea Night Mode Pro",
+    "description": "Upgrade modal title"
+  },
+  "upgradeModalSubtitle": {
+    "message": "Mejora la comodidad de tu navegación nocturna",
+    "description": "Upgrade modal subtitle"
+  },
+  "upgradeButton": {
+    "message": "Mejorar a Pro de por Vida",
+    "description": "Upgrade button text"
+  },
+  "restorePurchase": {
+    "message": "¿Ya compraste? Ingresa tu clave de licencia",
+    "description": "Restore purchase text"
+  }
+}

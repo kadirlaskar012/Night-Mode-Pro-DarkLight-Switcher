@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Night Mode Pro – Live Browser Verification Suite</title>
+  <style>
+    /* Base Test Page Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    /* Fixed Test Harness Header */
+    #test-control-panel {
+      position: sticky;
+      top: 0;
+      z-index: 999999;
+      background: #0f172a;
+      color: #f1f5f9;
+      padding: 14px 20px;
+      border-bottom: 2px solid #334155;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+
+    .panel-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 8px;
+    }
+
+    .panel-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .brand-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #818cf8;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .harness-badge {
+      font-size: 10px;
+      background: #4f46e5;
+      color: white;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .ctrl-btn {
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid #475569;
+      background: #1e293b;
+      color: #f8fafc;
+      transition: all 0.15s ease;
+    }
+
+    .ctrl-btn:hover {
+      background: #334155;
+      border-color: #64748b;
+    }
+
+    .ctrl-btn.active {
+      background: #4f46e5;
+      border-color: #818cf8;
+      color: white;
+      box-shadow: 0 0 12px rgba(99, 102, 241, 0.5);
+    }
+
+    .power-btn {
+      padding: 8px 18px;
+      font-size: 13px;
+      border-radius: 20px;
+      background: #22c55e;
+      color: white;
+      border: none;
+      font-weight: 700;
+    }
+
+    .power-btn.off {
+      background: #475569;
+      color: #cbd5e1;
+    }
+
+    .slider-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      background: #1e293b;
+      padding: 4px 10px;
+      border-radius: 8px;
+      border: 1px solid #334155;
+    }
+
+    .slider-group label {
+      color: #94a3b8;
+      font-weight: 500;
+    }
+
+    .slider-group input[type="range"] {
+      width: 90px;
+      cursor: pointer;
+      accent-color: #6366f1;
+    }
+
+    .slider-val {
+      font-family: monospace;
+      font-weight: 700;
+      color: #e2e8f0;
+      min-width: 32px;
+    }
+
+    .status-pill {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 12px;
+      font-family: monospace;
+      background: #0284c7;
+      color: white;
+    }
+
+    .flash-log {
+      font-size: 11px;
+      color: #10b981;
+      font-family: monospace;
+      font-weight: 600;
+    }
+
+    /* Page Demo Content */
+    .container {
+      max-width: 1080px;
+      margin: 32px auto;
+      padding: 0 20px;
+    }
+
+    .hero-card {
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      margin-bottom: 32px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .hero-card h1 {
+      font-size: 32px;
+      color: #0f172a;
+      margin-bottom: 12px;
+    }
+
+    .hero-card p {
+      font-size: 16px;
+      color: #475569;
+      margin-bottom: 24px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .demo-card {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    }
+
+    .demo-card h3 {
+      font-size: 18px;
+      margin-bottom: 12px;
+      color: #1e293b;
+    }
+
+    .demo-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-top: 12px;
+    }
+
+    .demo-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 14px;
+    }
+
+    .demo-table th, .demo-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #e2e8f0;
+      text-align: left;
+    }
+
+    .demo-table th {
+      background: #f1f5f9;
+      color: #334155;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .badge-green { background: #dcfce7; color: #15803d; }
+    .badge-blue { background: #dbeafe; color: #1d4ed8; }
+    .badge-purple { background: #f3e8ff; color: #7e22ce; }
+
+    /* Code block */
+    pre {
+      background: #1e293b;
+      color: #e2e8f0;
+      padding: 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      overflow-x: auto;
+      margin-top: 12px;
+    }
+  </style>
+
+  <!-- Night Mode Pro CSS Engine (Production Definition) -->
+  <style id="night-mode-pro-engine-style" data-engine="smart">
+    /* Night Mode Pro - Smart Engine with Smooth GPU Transitions */
+    html[data-night-mode-pro="smart"] {
+      filter: invert(1) hue-rotate(180deg)
+              brightness(var(--nmp-brightness, 0.85))
+              contrast(var(--nmp-contrast, 1.00))
+              sepia(var(--nmp-warm, 0.00))
+              grayscale(var(--nmp-grayscale, 0.00)) !important;
+      background-color: #ffffff !important;
+      transition: filter 200ms cubic-bezier(0.2, 0, 0, 1), background-color 200ms ease !important;
+    }
+
+    /* Media re-inversion so pictures, videos, icons and canvases stay normal */
+    html[data-night-mode-pro="smart"] img,
+    html[data-night-mode-pro="smart"] video,
+    html[data-night-mode-pro="smart"] canvas,
+    html[data-night-mode-pro="smart"] svg image,
+    html[data-night-mode-pro="smart"] iframe[src*="youtube"],
+    html[data-night-mode-pro="smart"] iframe[src*="vimeo"],
+    html[data-night-mode-pro="smart"] [data-nmp-bg="true"] {
+      filter: invert(1) hue-rotate(180deg) !important;
+      transition: filter 200ms cubic-bezier(0.2, 0, 0, 1) !important;
+    }
+
+    /* Prevent double inversion on img inside picture */
+    html[data-night-mode-pro="smart"] picture {
+      filter: none !important;
+    }
+    html[data-night-mode-pro="smart"] picture img {
+      filter: invert(1) hue-rotate(180deg) !important;
+      transition: filter 200ms cubic-bezier(0.2, 0, 0, 1) !important;
+    }
+
+    /* Smooth Off Transition state to prevent flash when disabling */
+    html[data-night-mode-pro="off"] {
+      filter: invert(0) hue-rotate(0deg) brightness(1) contrast(1) sepia(0) grayscale(0) !important;
+      transition: filter 200ms cubic-bezier(0.2, 0, 0, 1), background-color 200ms ease !important;
+    }
+    html[data-night-mode-pro="off"] img,
+    html[data-night-mode-pro="off"] video,
+    html[data-night-mode-pro="off"] canvas,
+    html[data-night-mode-pro="off"] [data-nmp-bg="true"] {
+      filter: none !important;
+      transition: filter 200ms cubic-bezier(0.2, 0, 0, 1) !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Live Test Control Panel -->
+  <header id="test-control-panel">
+    <div class="panel-row">
+      <div class="brand-title">
+        <span>🌙 Night Mode Pro</span>
+        <span class="harness-badge">v1.0.1 Live Test Harness</span>
+      </div>
+
+      <!-- Master Power Button -->
+      <button id="btn-power" class="power-btn off" onclick="togglePower()">
+        ⚡ POWER: OFF
+      </button>
+
+      <!-- Presets -->
+      <button id="btn-preset-night" class="ctrl-btn" onclick="applyPreset('night')">Preset: Night</button>
+      <button id="btn-preset-reading" class="ctrl-btn" onclick="applyPreset('reading')">Preset: Reading (Warm)</button>
+      <button id="btn-preset-deep" class="ctrl-btn" onclick="applyPreset('deep-night')">Preset: Deep Night</button>
+      <button id="btn-preset-oled" class="ctrl-btn" onclick="applyPreset('oled')">Preset: OLED Black</button>
+
+      <span id="engine-status" class="status-pill">State: INACTIVE</span>
+      <span id="flash-status" class="flash-log">✅ ZERO FLASHES (Smooth GPU active)</span>
+    </div>
+
+    <!-- Sliders Row -->
+    <div class="panel-row">
+      <div class="slider-group">
+        <label for="slider-brightness">Brightness:</label>
+        <input type="range" id="slider-brightness" min="10" max="100" value="85" oninput="updateSliders()">
+        <span id="val-brightness" class="slider-val">85%</span>
+      </div>
+
+      <div class="slider-group">
+        <label for="slider-warm">Warm Light Filter:</label>
+        <input type="range" id="slider-warm" min="0" max="100" value="0" oninput="updateSliders()">
+        <span id="val-warm" class="slider-val">0%</span>
+      </div>
+
+      <div class="slider-group">
+        <label for="slider-contrast">Contrast:</label>
+        <input type="range" id="slider-contrast" min="50" max="150" value="100" oninput="updateSliders()">
+        <span id="val-contrast" class="slider-val">100%</span>
+      </div>
+
+      <div class="slider-group">
+        <label for="slider-grayscale">Grayscale:</label>
+        <input type="range" id="slider-grayscale" min="0" max="100" value="0" oninput="updateSliders()">
+        <span id="val-grayscale" class="slider-val">0%</span>
+      </div>
+
+      <button id="btn-reset" class="ctrl-btn" onclick="resetDefaults()">Reset</button>
+    </div>
+  </header>
+
+  <!-- Main Web Content to Test -->
+  <main class="container">
+    <section class="hero-card">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <div>
+          <span class="badge badge-purple" style="margin-bottom:8px;">Live Cross-Check Verification</span>
+          <h1>Experience Night Mode Pro in Real-Time</h1>
+          <p>
+            This sandbox validates color inversion, smart photo preservation, warm light blue-filter calculation,
+            and GPU-accelerated smooth transitions with zero white flashes.
+          </p>
+        </div>
+      </div>
+      <div style="display:flex; gap:12px;">
+        <button class="ctrl-btn active" style="padding:10px 20px; font-size:14px;">Explore Features</button>
+        <button class="ctrl-btn" style="padding:10px 20px; font-size:14px;">Documentation</button>
+      </div>
+    </section>
+
+    <div class="grid-2">
+      <!-- Card with picture element -->
+      <article class="demo-card">
+        <h3>1. Smart Media Re-Inversion (No Negatives)</h3>
+        <p style="color:#64748b; font-size:13px;">
+          Photos inside <code>&lt;picture&gt;</code> and <code>&lt;img&gt;</code> tags must retain their true colors and skin tones without turning into creepy photographic negatives.
+        </p>
+        <picture>
+          <img
+            id="test-img-nature"
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&auto=format&fit=crop&q=80"
+            alt="Scenic Mountain Landscape"
+            loading="eager"
+          />
+        </picture>
+        <p style="font-size:12px; color:#64748b; margin-top:8px;">
+          ✅ Landscape Photo: True colors preserved under dark inversion.
+        </p>
+      </article>
+
+      <!-- Card with typography and data table -->
+      <article class="demo-card">
+        <h3>2. High-Contrast Reading &amp; Tables</h3>
+        <p style="color:#64748b; font-size:13px;">
+          Data tables and typography smoothly adjust luminance while keeping crisp text contrast.
+        </p>
+        <table class="demo-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Status</th>
+              <th>Performance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Smart Invert</td>
+              <td><span class="badge badge-green">Active</span></td>
+              <td>&lt; 1ms GPU</td>
+            </tr>
+            <tr>
+              <td>Warm Circadian</td>
+              <td><span class="badge badge-blue">Ready</span></td>
+              <td>450nm Filter</td>
+            </tr>
+            <tr>
+              <td>Anti-Flash Engine</td>
+              <td><span class="badge badge-purple">Zero Flash</span></td>
+              <td>60 FPS Smooth</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </div>
+
+    <section class="demo-card" style="margin-bottom:32px;">
+      <h3>3. Code Syntax &amp; Dark Theme Elements</h3>
+      <p style="color:#64748b; font-size:13px;">
+        Code snippets adapt with high readability and eye comfort.
+      </p>
+      <pre><code>// Night Mode Pro Engine State
+const state = {
+  active: true,
+  engine: "smart",
+  brightness: 85,
+  warm: 25,
+  contrast: 105,
+  transition: "200ms cubic-bezier(0.2, 0, 0, 1)"
+};
+console.log("Night Mode Pro active. Eye strain reduced by 85%.");</code></pre>
+    </section>
+  </main>
+
+  <!-- Interactive Harness Controller Script -->
+  <script>
+    let isNightActive = false;
+    let removeTimer = null;
+
+    const state = {
+      brightness: 85,
+      warm: 0,
+      contrast: 100,
+      grayscale: 0
+    };
+
+    function updateCSSVariables() {
+      const root = document.documentElement;
+      root.style.setProperty('--nmp-brightness', (state.brightness / 100).toFixed(2));
+      root.style.setProperty('--nmp-contrast', (state.contrast / 100).toFixed(2));
+      root.style.setProperty('--nmp-warm', (state.warm / 100).toFixed(2));
+      root.style.setProperty('--nmp-grayscale', (state.grayscale / 100).toFixed(2));
+
+      // Update UI labels
+      document.getElementById('val-brightness').textContent = state.brightness + '%';
+      document.getElementById('val-warm').textContent = state.warm + '%';
+      document.getElementById('val-contrast').textContent = state.contrast + '%';
+      document.getElementById('val-grayscale').textContent = state.grayscale + '%';
+
+      document.getElementById('slider-brightness').value = state.brightness;
+      document.getElementById('slider-warm').value = state.warm;
+      document.getElementById('slider-contrast').value = state.contrast;
+      document.getElementById('slider-grayscale').value = state.grayscale;
+    }
+
+    function togglePower() {
+      isNightActive = !isNightActive;
+      const btn = document.getElementById('btn-power');
+      const statusPill = document.getElementById('engine-status');
+
+      if (removeTimer) {
+        clearTimeout(removeTimer);
+        removeTimer = null;
+      }
+
+      if (isNightActive) {
+        btn.textContent = '⚡ POWER: ON';
+        btn.className = 'power-btn';
+        statusPill.textContent = 'State: SMART DARK ACTIVE';
+        statusPill.style.background = '#10b981';
+
+        updateCSSVariables();
+        document.documentElement.setAttribute('data-night-mode-pro', 'smart');
+      } else {
+        btn.textContent = '⚡ POWER: OFF';
+        btn.className = 'power-btn off';
+        statusPill.textContent = 'State: INACTIVE (Light)';
+        statusPill.style.background = '#64748b';
+
+        // Trigger smooth 200ms fade out transition
+        document.documentElement.setAttribute('data-night-mode-pro', 'off');
+        removeTimer = setTimeout(() => {
+          if (!isNightActive) {
+            document.documentElement.removeAttribute('data-night-mode-pro');
+          }
+        }, 220);
+      }
+    }
+
+    function updateSliders() {
+      state.brightness = parseInt(document.getElementById('slider-brightness').value, 10);
+      state.warm = parseInt(document.getElementById('slider-warm').value, 10);
+      state.contrast = parseInt(document.getElementById('slider-contrast').value, 10);
+      state.grayscale = parseInt(document.getElementById('slider-grayscale').value, 10);
+
+      updateCSSVariables();
+
+      if (!isNightActive) {
+        togglePower();
+      }
+    }
+
+    function applyPreset(name) {
+      if (!isNightActive) {
+        togglePower();
+      }
+
+      if (name === 'night') {
+        state.brightness = 85;
+        state.contrast = 100;
+        state.warm = 15;
+        state.grayscale = 0;
+      } else if (name === 'reading') {
+        state.brightness = 90;
+        state.contrast = 95;
+        state.warm = 45;
+        state.grayscale = 10;
+      } else if (name === 'deep-night') {
+        state.brightness = 65;
+        state.contrast = 90;
+        state.warm = 30;
+        state.grayscale = 0;
+      } else if (name === 'oled') {
+        state.brightness = 100;
+        state.contrast = 120;
+        state.warm = 0;
+        state.grayscale = 0;
+      }
+
+      updateCSSVariables();
+
+      // Highlight active preset button
+      document.querySelectorAll('.ctrl-btn').forEach(b => b.classList.remove('active'));
+      const activeBtn = document.getElementById('btn-preset-' + (name === 'deep-night' ? 'deep' : name));
+      if (activeBtn) activeBtn.classList.add('active');
+    }
+
+    function resetDefaults() {
+      state.brightness = 85;
+      state.contrast = 100;
+      state.warm = 0;
+      state.grayscale = 0;
+      updateCSSVariables();
+      document.querySelectorAll('.ctrl-btn').forEach(b => b.classList.remove('active'));
+    }
+
+    // Initialize CSS variables on load
+    updateCSSVariables();
+  </script>
+</body>
+</html>

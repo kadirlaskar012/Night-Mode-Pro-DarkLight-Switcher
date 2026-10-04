@@ -1,0 +1,104 @@
+{
+  "extName": {
+    "message": "Night Mode Pro – Dark Mode & Dark/Light Switcher",
+    "description": "Extension Name"
+  },
+  "extDescription": {
+    "message": "Smart dark mode for all websites. Invert colors, dim brightness, blue light filter & OLED black for total eye comfort at night.",
+    "description": "Extension Description"
+  },
+  "modeLight": {
+    "message": "Light",
+    "description": "Light mode label"
+  },
+  "modeDark": {
+    "message": "Dark",
+    "description": "Dark mode label"
+  },
+  "modeAuto": {
+    "message": "Auto",
+    "description": "Auto mode label"
+  },
+  "powerActive": {
+    "message": "Night Mode Active",
+    "description": "State when active"
+  },
+  "powerInactive": {
+    "message": "Night Mode Inactive",
+    "description": "State when inactive"
+  },
+  "brightness": {
+    "message": "Brightness",
+    "description": "Brightness slider label"
+  },
+  "warmLightFilter": {
+    "message": "Warm Light Filter",
+    "description": "Warm slider label"
+  },
+  "contrast": {
+    "message": "Contrast",
+    "description": "Contrast slider label"
+  },
+  "grayscale": {
+    "message": "Grayscale",
+    "description": "Grayscale slider label"
+  },
+  "presets": {
+    "message": "Presets",
+    "description": "Presets section label"
+  },
+  "savePreset": {
+    "message": "Save preset",
+    "description": "Save preset button"
+  },
+  "settings": {
+    "message": "Settings",
+    "description": "Settings button"
+  },
+  "upgrade": {
+    "message": "Upgrade $2.99",
+    "description": "Upgrade button"
+  },
+  "rateUs": {
+    "message": "Rate us",
+    "description": "Rate us button"
+  },
+  "alreadyDark": {
+    "message": "Site has native dark theme",
+    "description": "Already dark indicator"
+  },
+  "restrictedPage": {
+    "message": "Night Mode is not available on this browser page.",
+    "description": "Restricted page notice"
+  },
+  "proActive": {
+    "message": "PRO ACTIVE",
+    "description": "Pro plan status"
+  },
+  "trialRemaining": {
+    "message": "TRIAL: $DAYS$d left",
+    "description": "Trial days remaining",
+    "placeholders": {
+      "days": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "upgradeModalTitle": {
+    "message": "Unlock Night Mode Pro",
+    "description": "Upgrade modal title"
+  },
+  "upgradeModalSubtitle": {
+    "message": "Supercharge your night browsing comfort",
+    "description": "Upgrade modal subtitle"
+  },
+  "upgradeButton": {
+    "message": "Upgrade to Lifetime Pro",
+    "description": "Upgrade button text"
+  },
+  "restorePurchase": {
+    "message": "Already purchased? Enter license key",
+    "description": "Restore purchase text"
+  }
+}

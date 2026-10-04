@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Night Mode Pro – Instant Eye Comfort & Dark Mode For Every Website</title>
+  <meta name="description" content="Turn any website dark in one click. Features smart media inversion, warm light filter, customizable brightness, and sunset scheduling. One-time $2.99 lifetime purchase.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #090d16; }
+    .glow-indigo { box-shadow: 0 0 60px -15px rgba(99, 102, 241, 0.4); }
+    .glow-card { box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.6); }
+  </style>
+</head>
+<body class="text-slate-100 selection:bg-indigo-500 selection:text-white">
+
+  <!-- Navigation -->
+  <header class="sticky top-0 z-50 bg-[#090d16]/80 backdrop-blur-md border-b border-slate-800/80 px-6 py-4">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center p-2 shadow-lg shadow-indigo-500/30">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+        </div>
+        <span class="text-lg font-black tracking-tight text-white">Night Mode Pro</span>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#features" class="hover:text-white transition-colors">Features</a>
+        <a href="#demo" class="hover:text-white transition-colors">Live Preview</a>
+        <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
+        <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://chromewebstore.google.com/detail/night-mode-pro" target="_blank" class="px-4 py-2 rounded-xl text-xs font-semibold bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-600/30 transition-all flex items-center gap-2">
+          <span>Add to Chrome</span>
+          <span class="text-[10px] bg-indigo-700/60 px-1.5 py-0.5 rounded font-mono">Free</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-20 pb-28 px-6 overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(99,102,241,0.25),rgba(255,255,255,0))] -z-10 pointer-events-none"></div>
+
+    <div class="max-w-4xl mx-auto text-center space-y-6">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-semibold">
+        <span>✨ The Modern Eye-Care Extension for Chrome</span>
+      </div>
+
+      <h1 class="text-4xl sm:text-6xl font-black text-white tracking-tight leading-tight sm:leading-none">
+        Bright Websites Hurt.<br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-violet-300 to-amber-300">
+          Turn Any Site Dark in 1-Click.
+        </span>
+      </h1>
+
+      <p class="text-base sm:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+        High-contrast dark mode with smart media preservation, warm blue-light filters, and automated sunset scheduling. No subscriptions, zero tracking.
+      </p>
+
+      <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://chromewebstore.google.com/detail/night-mode-pro" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-bold text-base shadow-xl shadow-indigo-600/40 transition-all flex items-center justify-center gap-2">
+          <span>Install Extension (Free)</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </a>
+
+        <a href="#pricing" class="w-full sm:w-auto px-6 py-4 rounded-2xl bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 font-semibold text-sm transition-all">
+          Get Lifetime Pro ($2.99)
+        </a>
+      </div>
+
+      <div class="pt-4 flex items-center justify-center gap-6 text-xs text-slate-400">
+        <span class="flex items-center gap-1.5"><span class="text-emerald-400">✓</span> Zero Tracking</span>
+        <span class="flex items-center gap-1.5"><span class="text-emerald-400">✓</span> No White Flash</span>
+        <span class="flex items-center gap-1.5"><span class="text-emerald-400">✓</span> 7-Day Refund Policy</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Demo Section -->
+  <section id="demo" class="py-16 px-6 bg-slate-950/80 border-y border-slate-900">
+    <div class="max-w-5xl mx-auto space-y-8">
+      <div class="text-center space-y-2">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Experience The Difference</h2>
+        <p class="text-sm text-slate-400">Toggle between blinding default glare and soothing Night Mode Pro.</p>
+      </div>
+
+      <!-- Live Mockup Box -->
+      <div class="rounded-3xl border border-slate-800 bg-slate-900 p-4 shadow-2xl space-y-4">
+        <!-- Interactive Controls -->
+        <div class="flex flex-wrap items-center justify-between gap-4 px-2 pt-1">
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-semibold text-slate-300">Live Demo:</span>
+            <button id="demoToggleBtn" onclick="toggleDemoMode()" class="px-4 py-1.5 rounded-xl text-xs font-bold bg-indigo-600 text-white shadow-glow transition-all">
+              🌙 Dark Mode: ON
+            </button>
+          </div>
+
+          <div class="flex items-center gap-4 text-xs text-slate-400">
+            <label class="flex items-center gap-1.5">
+              <span>Warm Filter:</span>
+              <input id="demoWarmSlider" type="range" min="0" max="60" value="25" oninput="updateDemoStyle()" class="w-24 accent-amber-500">
+            </label>
+            <label class="flex items-center gap-1.5">
+              <span>Brightness:</span>
+              <input id="demoBrightSlider" type="range" min="50" max="100" value="85" oninput="updateDemoStyle()" class="w-24 accent-indigo-500">
+            </label>
+          </div>
+        </div>
+
+        <!-- Simulated Web Page Canvas -->
+        <div id="demoPage" class="rounded-2xl p-8 transition-all duration-300 min-h-[360px] flex flex-col justify-between" style="background-color: #121212; color: #f1f5f9;">
+          <div class="space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-800/80 pb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center font-bold text-white text-xs">WP</div>
+                <div class="text-sm font-bold">The Science of Nighttime Screen Comfort</div>
+              </div>
+              <div class="text-xs text-slate-500 font-mono">100% Readable • Zero Eye Strain</div>
+            </div>
+
+            <div class="space-y-3">
+              <p class="text-sm leading-relaxed text-slate-300">
+                Exposure to harsh, short-wavelength blue light at night significantly suppresses melatonin secretion, shifting the circadian phase and causing acute digital eye fatigue. Night Mode Pro eliminates background glare while maintaining color accuracy for photos and video.
+              </p>
+            </div>
+
+            <!-- Simulated Media Card (Never Inverted) -->
+            <div class="grid sm:grid-cols-2 gap-4 pt-2">
+              <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60 flex items-center gap-3">
+                <div class="w-12 h-12 rounded-lg bg-gradient-to-tr from-amber-400 to-rose-500 flex items-center justify-center text-xl flex-shrink-0">
+                  🎨
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-white">Full Color Integrity</div>
+                  <div class="text-[11px] text-slate-400">Images and illustrations retain natural tones without color inversion distortion.</div>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60 flex items-center gap-3">
+                <div class="w-12 h-12 rounded-lg bg-gradient-to-tr from-indigo-500 to-emerald-400 flex items-center justify-center text-xl flex-shrink-0">
+                  ⚡
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-white">Anti-Flash Technology</div>
+                  <div class="text-[11px] text-slate-400">Injected at document start so page navigation is always smooth and glare-free.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-[11px] text-slate-500 pt-6 border-t border-slate-800/80 flex justify-between">
+            <span>Simulated Web Preview (Night Mode Pro Engine)</span>
+            <span class="text-emerald-400 font-semibold">✓ Pure Eye Comfort</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Grid -->
+  <section id="features" class="py-24 px-6 max-w-6xl mx-auto space-y-16">
+    <div class="text-center space-y-3 max-w-2xl mx-auto">
+      <span class="text-xs font-bold uppercase tracking-widest text-indigo-400 bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">
+        Engineered for Eye Care
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+        Why Users Choose Night Mode Pro
+      </h2>
+      <p class="text-slate-400 text-sm">
+        Every detail is optimized for zero lag, zero tracking, and deep visual comfort.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Feature 1 -->
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 space-y-4 hover:border-slate-700 transition-all">
+        <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-xl">
+          ⚡
+        </div>
+        <h3 class="text-lg font-bold text-white">Zero White Flash</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Pre-paint styling injects before the DOM renders. You will never be blinded by bright white flashes during page refreshes or link clicks.
+        </p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 space-y-4 hover:border-slate-700 transition-all">
+        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xl">
+          🔥
+        </div>
+        <h3 class="text-lg font-bold text-white">Warm Circadian Filter</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Adjustable blue-light barrier reduces eye strain, headaches, and sleep disruption during late-night reading sessions.
+        </p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 space-y-4 hover:border-slate-700 transition-all">
+        <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl">
+          🎬
+        </div>
+        <h3 class="text-lg font-bold text-white">Smart Media Preservation</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Intelligent reverse filters keep YouTube streams, Netflix, Twitch, images, and canvas graphics in their vibrant, true-to-life colors.
+        </p>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 space-y-4 hover:border-slate-700 transition-all">
+        <div class="w-12 h-12 rounded-2xl bg-violet-500/10 border border-violet-500/30 flex items-center justify-center text-violet-400 text-xl">
+          🌅
+        </div>
+        <h3 class="text-lg font-bold text-white">Astronomical Solar Sync</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Set it and forget it. Night Mode Pro computes sunset and sunrise times offline, automatically transitioning to dark mode as the sun goes down.
+        </p>
+      </div>
+
+      <!-- Feature 5 -->
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 space-y-4 hover:border-slate-700 transition-all">
+        <div class="w-12 h-12 rounded-2xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 text-xl">
+          🌐
+        </div>
+        <h3 class="text-lg font-bold text-white">Wildcard Whitelist / Blacklist</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Keep dark mode off on your favorite natively dark websites, or enforce custom rules across subdomains with wildcard expressions like <code>*.domain.com</code>.
+        </p>
+      </div>
+
+      <!-- Feature 6 -->
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 space-y-4 hover:border-slate-700 transition-all">
+        <div class="w-12 h-12 rounded-2xl bg-rose-500/10 border border-rose-500/30 flex items-center justify-center text-rose-400 text-xl">
+          🔒
+        </div>
+        <h3 class="text-lg font-bold text-white">100% Private &amp; Offline</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Zero analytics, zero tracking, zero remote code. Your browsing activity never leaves your browser.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="py-20 px-6 bg-slate-950 border-t border-slate-900">
+    <div class="max-w-4xl mx-auto space-y-12">
+      <div class="text-center space-y-3">
+        <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 bg-emerald-950/80 px-3 py-1 rounded-full border border-emerald-500/30">
+          Transparent Pricing
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+          Simple, Honest, One-Time Price
+        </h2>
+        <p class="text-slate-400 text-sm">
+          No monthly subscription traps. Buy once, enjoy lifetime eye comfort.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 items-stretch">
+        <!-- Free Tier Card -->
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="flex justify-between items-center">
+              <h3 class="text-lg font-bold text-white">Night Mode Free</h3>
+              <span class="text-xs font-semibold text-slate-400 bg-slate-800 px-2.5 py-1 rounded-full">Included</span>
+            </div>
+            <div class="text-3xl font-black text-white">$0 <span class="text-xs font-normal text-slate-400">/ forever</span></div>
+            <p class="text-xs text-slate-400">Essential one-click dark mode for everyday browsing.</p>
+
+            <ul class="space-y-2.5 text-xs text-slate-300 pt-4 border-t border-slate-800">
+              <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Global Dark / Light toggle</li>
+              <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Smart Invert Engine (media preserved)</li>
+              <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Brightness slider (50%–100%)</li>
+              <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> "Night" calibrated preset</li>
+              <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Alt+Shift+D keyboard shortcut</li>
+              <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Toolbar status badge</li>
+            </ul>
+          </div>
+
+          <a href="https://chromewebstore.google.com/detail/night-mode-pro" target="_blank" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-center font-bold text-xs transition-colors">
+            Install Free Version
+          </a>
+        </div>
+
+        <!-- Pro Tier Card (Featured) -->
+        <div class="relative bg-gradient-to-b from-indigo-950/70 via-slate-900 to-slate-900 border-2 border-indigo-500 rounded-3xl p-8 flex flex-col justify-between space-y-6 shadow-2xl shadow-indigo-500/20">
+          <div class="absolute -top-3.5 right-6 px-3 py-1 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 text-[10px] font-black uppercase tracking-wider shadow-md">
+            Launch Special (57% Off)
+          </div>
+
+          <div class="space-y-4">
+            <div class="flex justify-between items-center">
+              <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                Night Mode Pro
+                <span class="text-amber-400 text-sm">⭐</span>
+              </h3>
+            </div>
+
+            <div class="flex items-baseline gap-2">
+              <span class="text-4xl font-black text-white">$2.99</span>
+              <span class="text-sm text-slate-400 line-through">$6.99</span>
+              <span class="text-xs font-semibold text-emerald-400">One-Time Lifetime</span>
+            </div>
+
+            <p class="text-xs text-indigo-200 font-medium">One-time payment • No subscription • Lifetime updates</p>
+
+            <ul class="space-y-2.5 text-xs text-slate-200 pt-4 border-t border-slate-800">
+              <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> <strong>Everything in Free</strong></li>
+              <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Warm Light &amp; Blue-Light Shield</li>
+              <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Astronomical Sunset/Sunrise Automation</li>
+              <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> All Presets (Reading, Deep Night, OLED Black)</li>
+              <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Save Unlimited Custom Presets</li>
+              <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Per-Site Overrides &amp; Wildcard Whitelists</li>
+              <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Filter-Only Engine for sensitive websites</li>
+              <li class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Multi-device activation (up to 3 computers)</li>
+            </ul>
+          </div>
+
+          <div class="space-y-2">
+            <a href="https://nightmodepro.lemonsqueezy.com/buy/demo-night-mode-pro" target="_blank" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white text-center font-bold text-xs shadow-glow transition-all flex items-center justify-center gap-2">
+              <span>Upgrade to Lifetime Pro ($2.99)</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+            <p class="text-[11px] text-center text-slate-400">🛡️ 7-Day 100% No-Questions-Asked Money-Back Guarantee</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-20 px-6 max-w-4xl mx-auto space-y-12">
+    <div class="text-center space-y-2">
+      <h2 class="text-3xl font-extrabold text-white">Frequently Asked Questions</h2>
+      <p class="text-slate-400 text-sm">Everything you need to know about Night Mode Pro.</p>
+    </div>
+
+    <div class="space-y-4">
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-2">
+        <h4 class="text-sm font-bold text-white">How is Night Mode Pro different from traditional dark theme extensions?</h4>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Traditional extensions often inject heavy, slow DOM analyzers that drag browser frame rates down, cause battery drain, and invert video colors. Night Mode Pro uses hardware-accelerated CSS inversion with zero white flash and zero trackers.
+        </p>
+      </div>
+
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-2">
+        <h4 class="text-sm font-bold text-white">Are there really no recurring monthly subscription charges?</h4>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Yes! Night Mode Pro is a simple one-time lifetime license of $2.99. You pay once and receive all future updates for free.
+        </p>
+      </div>
+
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-2">
+        <h4 class="text-sm font-bold text-white">Can I use my license key on more than one computer?</h4>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Yes. A single license key permits activation on up to 3 personal devices (e.g. desktop, laptop, and work machine). You can also deactivate a device anytime in the settings to transfer your license.
+        </p>
+      </div>
+
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-2">
+        <h4 class="text-sm font-bold text-white">What happens if a website already has a native dark theme?</h4>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Night Mode Pro detects native dark themes automatically using computed background luminance and color-scheme meta tags, skipping inversion so the site doesn't turn white. You can always override this behavior per site.
+        </p>
+      </div>
+
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-2">
+        <h4 class="text-sm font-bold text-white">How does the 7-day refund guarantee work?</h4>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          If you are not delighted with Night Mode Pro for any reason, email support@nightmodepro.com within 7 days of purchase and we will issue a full, instant refund.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 border-t border-slate-900 py-12 px-6 text-xs text-slate-400">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-white">Night Mode Pro</span>
+        <span>• Eye Comfort for Every Screen</span>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="../PRIVACY-POLICY.html" class="hover:text-white transition-colors">Privacy Policy</a>
+        <a href="mailto:support@nightmodepro.com" class="hover:text-white transition-colors">Support</a>
+        <a href="https://chromewebstore.google.com/detail/night-mode-pro" target="_blank" class="hover:text-white transition-colors">Chrome Web Store</a>
+      </div>
+
+      <div>
+        &copy; 2026 Night Mode Pro. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Simple script for the live demo interactive controls -->
+  <script>
+    let isDark = true;
+    function toggleDemoMode() {
+      isDark = !isDark;
+      const btn = document.getElementById('demoToggleBtn');
+      const page = document.getElementById('demoPage');
+      if (isDark) {
+        btn.textContent = '🌙 Dark Mode: ON';
+        btn.className = 'px-4 py-1.5 rounded-xl text-xs font-bold bg-indigo-600 text-white shadow-glow transition-all';
+        updateDemoStyle();
+      } else {
+        btn.textContent = '☀️ Light Mode: OFF';
+        btn.className = 'px-4 py-1.5 rounded-xl text-xs font-bold bg-slate-700 text-slate-300 transition-all';
+        page.style.backgroundColor = '#ffffff';
+        page.style.color = '#0f172a';
+        page.style.filter = 'none';
+      }
+    }
+
+    function updateDemoStyle() {
+      if (!isDark) return;
+      const page = document.getElementById('demoPage');
+      const warm = document.getElementById('demoWarmSlider').value;
+      const bright = document.getElementById('demoBrightSlider').value;
+      page.style.backgroundColor = '#121212';
+      page.style.color = '#f1f5f9';
+      page.style.filter = `brightness(${bright}%) sepia(${warm}%)`;
+    }
+  </script>
+</body>
+</html>

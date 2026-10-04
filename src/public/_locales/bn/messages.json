@@ -1,0 +1,104 @@
+{
+  "extName": {
+    "message": "নাইট মোড প্রো – ডার্ক মোড এবং ডার্ক/লাইট সুইচার",
+    "description": "Extension Name"
+  },
+  "extDescription": {
+    "message": "সকল ওয়েবসাইটের জন্য স্মার্ট ডার্ক মোড। ব্রাইটনেস কন্ট্রোল, ব্লু-লাইট ফিল্টার ও ট্রু ওএলইডি ব্ল্যাক দিয়ে চোখের পরম আরাম পান।",
+    "description": "Extension Description"
+  },
+  "modeLight": {
+    "message": "লাইট",
+    "description": "Light mode label"
+  },
+  "modeDark": {
+    "message": "ডার্ক",
+    "description": "Dark mode label"
+  },
+  "modeAuto": {
+    "message": "অটো",
+    "description": "Auto mode label"
+  },
+  "powerActive": {
+    "message": "নাইট মোড চালু আছে",
+    "description": "State when active"
+  },
+  "powerInactive": {
+    "message": "নাইট মোড বন্ধ আছে",
+    "description": "State when inactive"
+  },
+  "brightness": {
+    "message": "উজ্জ্বলতা",
+    "description": "Brightness slider label"
+  },
+  "warmLightFilter": {
+    "message": "ওয়ার্ম লাইট ফিল্টার",
+    "description": "Warm slider label"
+  },
+  "contrast": {
+    "message": "কনট্রাস্ট",
+    "description": "Contrast slider label"
+  },
+  "grayscale": {
+    "message": "গ্রেস্কেল",
+    "description": "Grayscale slider label"
+  },
+  "presets": {
+    "message": "প্রিসেটসমূহ",
+    "description": "Presets section label"
+  },
+  "savePreset": {
+    "message": "প্রিসেট সেভ করুন",
+    "description": "Save preset button"
+  },
+  "settings": {
+    "message": "সেটিংস",
+    "description": "Settings button"
+  },
+  "upgrade": {
+    "message": "আপগ্রেড $২.৯৯",
+    "description": "Upgrade button"
+  },
+  "rateUs": {
+    "message": "রেটিং দিন",
+    "description": "Rate us button"
+  },
+  "alreadyDark": {
+    "message": "সাইটে নিজস্ব ডার্ক থিম আছে",
+    "description": "Already dark indicator"
+  },
+  "restrictedPage": {
+    "message": "এই ব্রাউজার পেজে নাইট মোড সমর্থিত নয়।",
+    "description": "Restricted page notice"
+  },
+  "proActive": {
+    "message": "প্রো সক্রিয়",
+    "description": "Pro plan status"
+  },
+  "trialRemaining": {
+    "message": "ট্রায়াল: $DAYS$ দিন বাকি",
+    "description": "Trial days remaining",
+    "placeholders": {
+      "days": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "upgradeModalTitle": {
+    "message": "নাইট মোড প্রো আনলক করুন",
+    "description": "Upgrade modal title"
+  },
+  "upgradeModalSubtitle": {
+    "message": "রাতে ব্রাউজিংয়ের চোখের আরাম নিশ্চিত করুন",
+    "description": "Upgrade modal subtitle"
+  },
+  "upgradeButton": {
+    "message": "লাইফটাইম প্রো-তে আপগ্রেড করুন",
+    "description": "Upgrade button text"
+  },
+  "restorePurchase": {
+    "message": "আগে কেনা আছে? লাইসেন্স কী দিন",
+    "description": "Restore purchase text"
+  }
+}

@@ -1,0 +1,68 @@
+import { Preset, UserSettings } from '../types/settings';
+
+export const BUILT_IN_PRESETS: Preset[] = [
+  {
+    id: 'night',
+    name: 'Night',
+    isCustom: false,
+    isPro: false,
+    brightness: 85,
+    contrast: 100,
+    warm: 15,
+    grayscale: 0,
+  },
+  {
+    id: 'reading',
+    name: 'Reading',
+    isCustom: false,
+    isPro: true,
+    brightness: 90,
+    contrast: 95,
+    warm: 45,
+    grayscale: 10,
+  },
+  {
+    id: 'deep-night',
+    name: 'Deep Night',
+    isCustom: false,
+    isPro: true,
+    brightness: 65,
+    contrast: 90,
+    warm: 30,
+    grayscale: 0,
+  },
+  {
+    id: 'oled-black',
+    name: 'OLED Black',
+    isCustom: false,
+    isPro: true,
+    brightness: 100,
+    contrast: 120,
+    warm: 0,
+    grayscale: 0,
+  },
+];
+
+export const DEFAULT_USER_SETTINGS: UserSettings = {
+  version: 1,
+  enabled: true,
+  mode: 'dark',
+  engine: 'smart',
+  brightness: 85,
+  contrast: 100,
+  warm: 0,
+  grayscale: 0,
+  activePresetId: 'night',
+  customPresets: [],
+  schedule: {
+    type: 'time',
+    startTime: '20:00',
+    endTime: '07:00',
+  },
+  smoothTransition: true,
+  alreadyDarkDetection: true,
+  perSiteSettings: {},
+  siteRules: [],
+  language: 'en',
+  hasSeenOnboarding: false,
+};

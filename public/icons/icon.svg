@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+    <linearGradient id="sunGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#fbbf24" />
+    </linearGradient>
+    <linearGradient id="moonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#c7d2fe" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background rounded squircle -->
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="url(#bgGradient)" />
+
+  <!-- Split circle container -->
+  <g transform="translate(64, 64)">
+    <!-- Right side: Warm Sun glow -->
+    <path d="M 0 -36 A 36 36 0 0 1 0 36 Z" fill="url(#sunGradient)" opacity="0.95" />
+    <!-- Sun rays -->
+    <circle cx="28" cy="-28" r="3.5" fill="#fde68a" />
+    <circle cx="38" cy="0" r="3.5" fill="#fde68a" />
+    <circle cx="28" cy="28" r="3.5" fill="#fde68a" />
+
+    <!-- Left side: Crescent Moon -->
+    <path d="M 0 -36 A 36 36 0 0 0 0 36 A 27 27 0 0 1 0 -36 Z" fill="url(#moonGradient)" filter="url(#glow)" />
+    <!-- Moon stars -->
+    <circle cx="-16" cy="-14" r="2" fill="#ffffff" />
+    <circle cx="-24" cy="10" r="1.5" fill="#ffffff" />
+    <circle cx="-10" cy="20" r="2" fill="#ffffff" />
+  </g>
+</svg>
