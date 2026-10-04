@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Night Mode Pro</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #1e293b;
+      background-color: #f8fafc;
+      margin: 0;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+      border: 1px solid #e2e8f0;
+    }
+    h1 { color: #0f172a; font-size: 28px; margin-top: 0; }
+    h2 { color: #1e293b; font-size: 20px; margin-top: 32px; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px; }
+    p, li { color: #475569; font-size: 15px; }
+    ul { padding-left: 20px; }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      background: #e0e7ff;
+      color: #4338ca;
+      font-weight: 600;
+      border-radius: 9999px;
+      font-size: 12px;
+      margin-bottom: 16px;
+    }
+    .notice {
+      background: #f1f5f9;
+      border-left: 4px solid #6366f1;
+      padding: 16px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    a { color: #4f46e5; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { margin-top: 40px; font-size: 13px; color: #94a3b8; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <span class="badge">Privacy First</span>
+    <h1>Privacy Policy for Night Mode Pro</h1>
+    <p><strong>Effective Date:</strong> October 4, 2026</p>
+    <p>
+      At <strong>Night Mode Pro</strong> ("we", "our", or "the extension"), we are committed to protecting your privacy. We believe software should do its job cleanly without monitoring, profiling, or selling your activity. This Privacy Policy describes how Night Mode Pro handles user information.
+    </p>
+
+    <div class="notice">
+      <strong>Key Takeaway:</strong> Night Mode Pro collects <strong>ZERO personal data</strong>, includes <strong>ZERO analytics or tracking scripts</strong>, and performs <strong>ZERO remote code execution</strong>. All theme adjustments and settings are processed 100% locally on your machine.
+    </div>
+
+    <h2>1. Data We Do NOT Collect</h2>
+    <ul>
+      <li><strong>No Browsing History:</strong> We do not log, track, or record the websites or URLs you visit.</li>
+      <li><strong>No Personal Identifiers:</strong> We do not collect names, phone numbers, IP addresses, or device fingerprints.</li>
+      <li><strong>No Telemetry or Usage Analytics:</strong> We do not use Google Analytics, Mixpanel, Sentry, or any third-party analytics SDKs.</li>
+      <li><strong>No Web Page Content:</strong> We do not read or record keystrokes, form fields, passwords, or document contents.</li>
+    </ul>
+
+    <h2>2. Data Stored Locally On Your Device</h2>
+    <p>Night Mode Pro stores your personal settings locally using standard browser storage APIs:</p>
+    <ul>
+      <li><strong>chrome.storage.sync:</strong> Used to save your brightness level, warmth, contrast preferences, custom presets, active mode, and whitelist/blacklist rules. This data stays within your personal Google Chrome profile.</li>
+      <li><strong>chrome.storage.local:</strong> Used to store your installation timestamp (to manage the 7-day free trial), cached license activation status, and an anonymous randomized client identifier (used solely to enforce the 3-device limit per license key).</li>
+    </ul>
+
+    <h2>3. The Only External Network Communication (License Verification)</h2>
+    <p>
+      Night Mode Pro makes network requests <strong>exclusively</strong> when a user voluntarily upgrades to the Pro version and enters a license key for validation:
+    </p>
+    <ul>
+      <li><strong>Payment Processors:</strong> We partner with trusted external payment providers (<strong>Lemon Squeezy</strong> and <strong>Gumroad</strong>). Payments occur directly on their secure checkout pages. We never receive or store your credit card details.</li>
+      <li><strong>License Verification:</strong> When you enter a license key in the extension settings, the key and an anonymous device identifier are transmitted directly to the payment processor's verification API (<code>api.lemonsqueezy.com</code> or <code>api.gumroad.com</code>) to verify validity and device activation count.</li>
+      <li>If you use the free version without entering a license key, <strong>zero external network requests</strong> are made.</li>
+    </ul>
+
+    <h2>4. Browser Permissions and Why They Are Needed</h2>
+    <ul>
+      <li><strong>storage:</strong> Needed to save your chosen theme settings, custom presets, and site rules on your device.</li>
+      <li><strong>activeTab:</strong> Needed to toggle dark mode on the current webpage when you click the extension popup or use keyboard shortcuts.</li>
+      <li><strong>alarms:</strong> Needed to schedule automatic transitions for sunset/sunrise mode and periodic silent license revalidation.</li>
+      <li><strong>scripting:</strong> Needed to inject dark mode CSS styles and prevent white glare during page loading.</li>
+      <li><strong>host_permissions (&lt;all_urls&gt;):</strong> Needed to apply color inversion and dark theme styling across visited websites.</li>
+      <li><strong>optional_permissions (geolocation):</strong> Strictly optional. If you enable "Astronomical Sunrise/Sunset" scheduling, the browser asks for your coordinates once to compute local twilight times offline. Coordinates are stored locally and are never transmitted to any server.</li>
+    </ul>
+
+    <h2>5. Children's Privacy</h2>
+    <p>
+      Night Mode Pro does not collect any personal data from anyone, including children under the age of 13.
+    </p>
+
+    <h2>6. Changes to this Privacy Policy</h2>
+    <p>
+      If we make changes to this policy, we will update the "Effective Date" at the top of this document. Any updates will maintain our core commitment to zero tracking.
+    </p>
+
+    <h2>7. Contact Information</h2>
+    <p>
+      If you have questions about this Privacy Policy, please contact our support team at:<br>
+      <strong>Email:</strong> <a href="mailto:support@nightmodepro.com">support@nightmodepro.com</a><br>
+      <strong>Website:</strong> <a href="https://nightmodepro.com">https://nightmodepro.com</a>
+    </p>
+
+    <footer>
+      &copy; 2026 Night Mode Pro. All rights reserved. Built with privacy and user respect.
+    </footer>
+  </div>
+</body>
+</html>
